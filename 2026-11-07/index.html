@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>鹭 · 今晚的工作台</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 100%; max-width: 100%; max-width: 900px; margin: 0 auto; padding: 44px 48px 52px;
+    background: #f6f7fb;
+    font-family: "Microsoft YaHei", "PingFang SC", -apple-system, sans-serif;
+    color: #1b1f2a; -webkit-font-smoothing: antialiased;
+  }
+  .top { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 6px; }
+  h1 { font-size: 34px; font-weight: 700; letter-spacing: -.5px; }
+  .sub { color: #79808f; font-size: 15px; margin-top: 8px; }
+  .date { text-align: right; color: #79808f; font-size: 14px; line-height: 1.7; }
+  .bar { height: 4px; width: 88px; background: linear-gradient(90deg,#6c5ce7,#a29bfe); border-radius: 4px; margin: 18px 0 30px; }
+  .section { background: #fff; border-radius: 16px; padding: 26px 28px; margin-bottom: 18px;
+    box-shadow: 0 2px 10px rgba(27,31,42,.05); border: 1px solid #eceef5; }
+  .section h2 { font-size: 18px; font-weight: 700; margin-bottom: 18px; display: flex; align-items: center; gap: 9px; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; background: #6c5ce7; }
+  .row { display: flex; gap: 14px; padding: 11px 0; border-top: 1px solid #f1f2f7; font-size: 15px; line-height: 1.6; }
+  .row:first-of-type { border-top: none; padding-top: 0; }
+  .k { flex: 0 0 132px; color: #6b7280; }
+  .v { flex: 1; }
+  .ok { color: #12a150; font-weight: 600; }
+  .pend { color: #e08b00; font-weight: 600; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .card { background: #fafbff; border: 1px solid #eceef6; border-radius: 12px; padding: 16px 18px; }
+  .card .t { font-size: 13px; color: #79808f; margin-bottom: 6px; }
+  .card .n { font-size: 26px; font-weight: 700; letter-spacing: -.5px; }
+  .card .n span { font-size: 13px; font-weight: 500; color: #79808f; margin-left: 4px; }
+  .tag { display: inline-block; font-size: 12px; padding: 2px 9px; border-radius: 999px; background: #eef0ff; color: #5a4bd6; margin-left: 8px; vertical-align: 2px; }
+  .foot { text-align: center; color: #9aa0ae; font-size: 12.5px; margin-top: 26px; }
+
+  @media (max-width: 640px) {
+    body { padding: 24px 16px 34px !important; }
+    h1 { font-size: 26px !important; }
+    .grid { grid-template-columns: 1fr 1fr !important; }
+    .k { flex: 0 0 92px !important; font-size: 14px; }
+    .section { padding: 20px 18px !important; }
+  }
+</style>
+</head>
+<body>
+  <div class="top">
+    <div>
+      <h1>今晚的工作台</h1>
+      <div class="sub">2026-11-07 · 周六 · 16:44 → 22:00</div>
+    </div>
+    <div class="date">鹭 · 私人助手<br>Hermes Agent</div>
+  </div>
+  <div class="bar"></div>
+
+  <div class="grid" style="margin-bottom:18px">
+    <div class="card"><div class="t">修掉的问题</div><div class="n">5 <span>个</span></div></div>
+    <div class="card"><div class="t">已排定定时任务</div><div class="n">7 <span>个</span></div></div>
+    <div class="card"><div class="t">清理旧会话</div><div class="n">55 <span>条</span></div></div>
+  </div>
+
+  <div class="section">
+    <h2><span class="dot"></span>微信通道：从"能用"到"干净"</h2>
+    <div class="row"><div class="k">早晚简报</div><div class="v"><span class="ok">已改投微信</span>，08:00 / 23:00 实测可达</div></div>
+    <div class="row"><div class="k">系统提示</div><div class="v">打断提示 / 工具进度 / 中途旁白 / 自我改进回顾 全部静音</div></div>
+    <div class="row"><div class="k">桌面端</div><div class="v">不受影响，该显示的过程照常显示</div></div>
+    <div class="row"><div class="k">即时回执</div><div class="v">长任务先用 <code>hermes send</code> 推一句"收到"，不再让你干等</div></div>
+  </div>
+
+  <div class="section">
+    <h2><span class="dot"></span>课表：从 docx 到自动提醒</h2>
+    <div class="row"><div class="k">源文件</div><div class="v">教务《最新课表.docx》，按行列逐格解析，周次规则全部录入</div></div>
+    <div class="row"><div class="k">提醒规则</div><div class="v">每节课前 <b>20 分钟</b>推送到微信，含教室 / 老师 / 下一节</div></div>
+    <div class="row"><div class="k">站点核对</div><div class="v">urok 第 9 周与 source 比对，<span class="ok">0 处差异</span></div></div>
+    <div class="row"><div class="k">已知变化</div><div class="v">第 10 周起新增周六《形势与政策》10:45 · 3-228</div></div>
+  </div>
+
+  <div class="section">
+    <h2><span class="dot"></span>排期表</h2>
+    <div class="row"><div class="k">每日 08:00</div><div class="v">早报（情报员版 · 已重写）</div></div>
+    <div class="row"><div class="k">每日 23:00</div><div class="v">晚报（财经 / 全球 / 军事）</div></div>
+    <div class="row"><div class="k">每 5 分钟</div><div class="v">课前提醒（有课才响，无课静默）</div></div>
+    <div class="row"><div class="k">每周六 21:00</div><div class="v">GitHub 热门项目周报</div></div>
+    <div class="row"><div class="k">每日 10:00</div><div class="v">Hermes Mobile 放号盯梢（有动静才推）</div></div>
+  </div>
+
+  <div class="section">
+    <h2><span class="dot"></span>还差一步</h2>
+    <div class="row"><div class="k">会话恢复</div><div class="v"><span class="pend">已归档 55 条坏会话</span>（数据库层绕过接口），桌面试试点项目能否开新对话</div></div>
+    <div class="row"><div class="k">备份</div><div class="v">state.db 已备份至 E:\HermesData\home\backups\</div></div>
+  </div>
+
+  <div class="foot">鹭 · 由 Hermes Agent 生成 · 数据截至 2026-11-07 22:00</div>
+</body>
+</html>
